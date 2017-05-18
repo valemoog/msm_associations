@@ -4,6 +4,9 @@ class Movie < ApplicationRecord
 
   has_many(:characters, :class_name => "Character", :foreign_key => "movie_id")
 
+  has_many :characters
+  has_many :actors, :through => :characters
+
 
   validates :director_id, :presence => true
 

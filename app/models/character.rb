@@ -11,10 +11,5 @@ class Character < ApplicationRecord
   validates :actor_id, :presence => true
 #  - name: no rules
 #
-# Actor:
-#  - name: must be present; must be unique in combination with dob
-validates :actor, :presence => true, :uniqueness => {:scope => :dob}
-#  - dob: no rules
-#  - bio: no rules
-#  - image_url: no rules
+
 end
