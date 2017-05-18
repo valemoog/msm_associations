@@ -18,7 +18,7 @@
       <dd><%= @director.image_url %></dd>
 
       <dt>Number of films directed</dt>
-      <dd> <%= Movie.where(:director_id => @director.id).count %> </dd>
+      <dd> <%= @director.movies.count %> </dd>
 
     </dl>
 
@@ -39,7 +39,7 @@
 <ul>
 
 <% Movie.where(director_id: @director.id).each do |movie| %>
-<li> <a href="/movies/<%= movie.id %>"><%= movie.title  %></li>
+<li> <a href="/movies/<%= movie.id %>"><%= movie.title  %> </a></li>
   <% end %>
 
 
